@@ -1,0 +1,93 @@
+.bodys {
+    margin-top: 5%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+.first {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.product-details {
+    margin-top: 10%;
+    height: 50%;
+    display: flex;
+    max-width: 900px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-details img {
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.product-details .second {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 550px;
+}
+
+.product-details h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.product-details .farmerName {
+    font-size: 14px;
+    color: #007185;
+    margin-bottom: 10px;
+}
+
+.product-details .description {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.product-details .price {
+    font-size: 20px;
+    color: #b12704;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.product-details button {
+    background-color: #ffd814;
+    color: #111;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 1px solid #fcd200;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+
+}
+
+button:hover {
+    background-color: #f7ca00;
+}
+
+.product-details span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #b12704;
+}
