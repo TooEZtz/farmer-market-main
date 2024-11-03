@@ -21,8 +21,9 @@ function UserDashboard() {
 
     return (
         <div className="bg">
+            <h1>Available Products</h1>
             <div className="user-dashboard">
-                <h1>Available Products</h1>
+                {/* <div className="imgs"></div> */}
                 <div className="product-list">
                     {products.map(product => (
                         <ProductCard key={product._id} product={product} />

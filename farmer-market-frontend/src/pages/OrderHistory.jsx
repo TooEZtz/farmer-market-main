@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import { AuthContext } from '../context/AuthContext';
+import './styles/OrderHistory.css'
 
 function OrderHistory() {
   const { token } = useContext(AuthContext);
@@ -23,27 +24,33 @@ function OrderHistory() {
 
   return (
     <div className="order-history">
-      <h1>Your Orders</h1>
-      {orders.length === 0 ? (
-        <p>You have no orders yet.</p>
-      ) : (
-        orders.map((order) => (
-          <div key={order._id} className="order">
-            <h3>Order ID: {order._id}</h3>
-            <p>Date: {new Date(order.createdAt).toLocaleString()}</p>
-            <p>Total: ${order.totalPrice}</p>
-            <h4>Items:</h4>
-            <ul>
-              {order.products.map((item) => (
-                <li key={item.product._id}>
-                  {item.product.name} - Quantity: {item.quantity}
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))
-      )}
-    </div>
+      <div className="container-div">
+        <h1>Your Orders</h1>
+        {console.log(orders)}
+        {orders.length === 0 ? (
+          <p>You have no orders yet.</p>
+        ) : (
+          orders.map((order) => (
+            <div key={order._id} className="order">
+              <h3>Order ID: {order._id}</h3>
+              <p>Date: {new Date(order.createdAt).toLocaleString()}</p>
+              <p>Total: ${order.totalPrice}</p>
+
+              <ul>
+                {order.products.map((item) => (
+
+                  < li key={item._id} >
+                    {console.log(item)}
+                    {item.name}
+
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))
+        )}
+      </div>
+    </div >
   );
 }
 

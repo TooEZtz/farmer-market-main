@@ -21,7 +21,7 @@ function Navbar() {
           Smart Farmer's Market
         </Link>
         <span>|</span>
-        <p>Straight to Your Kitchen</p>
+        <p>Fresh from the Farm to Your Table, Anytime, Anywhere</p>
       </div>
       <div className="navbar-right">
         {userType === 'customer' && (

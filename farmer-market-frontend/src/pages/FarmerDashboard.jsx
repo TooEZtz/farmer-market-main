@@ -45,8 +45,8 @@ function FarmerDashboard() {
                 <h1>Farmer's Dashboard</h1>
                 <p >Total Earnings: ${earnings}</p>
             </div>
+            <h2>Add New Product</h2>
             <div className="mid">
-                <h2>Add New Product</h2>
                 <form onSubmit={handleAddProduct}>
                     <input type="text" placeholder="Product Name" value={newProduct.name} onChange={(e) => setNewProduct({ ...newProduct, name: e.target.value })} required />
                     <textarea placeholder="Description" value={newProduct.description} onChange={(e) => setNewProduct({ ...newProduct, description: e.target.value })} required></textarea>
@@ -54,13 +54,13 @@ function FarmerDashboard() {
                     <input type="text" placeholder="Image URL" value={newProduct.image} onChange={(e) => setNewProduct({ ...newProduct, image: e.target.value })} required />
                     <button type="submit">Add Product</button>
                 </form>
-                <div className="image-a"></div>
             </div>
             <div className="bot">
                 <h2>Your Products</h2>
                 <div className="product-list">
                     {products.map(product => (
                         <div key={product._id} className="dashboard-product-card">
+                            <img src={product.image} alt="" />
                             <h3>{product.name}</h3>
                             <p>Price: ${product.price}</p>
                             <p>Status: {product.available ? 'Available' : 'Sold'}</p>

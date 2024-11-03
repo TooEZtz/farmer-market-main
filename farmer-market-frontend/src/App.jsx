@@ -64,7 +64,6 @@ function App() {
                   </PrivateRoute>
                 }
               />
-              {/* Add more routes as needed */}
             </Routes>
           </div>
           <Footer />

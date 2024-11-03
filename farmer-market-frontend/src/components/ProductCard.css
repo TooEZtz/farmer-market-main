@@ -2,12 +2,14 @@
     display: flex;
     flex-direction: column;
     min-width: 180px;
-    width: 180px;
-    height: 300px;
+    width: 250px;
+    height: 350px;
     justify-content: space-between;
     gap: 5px;
     border-radius: 15px;
     border-radius: 20px;
+    background-color: #6c584c34;
+    backdrop-filter: blur(15px);
 }
 
 .text {
@@ -59,8 +61,7 @@
     width: 100%;
     padding: 10px 10px;
     margin-top: 15px;
-    border: 1px solid yellow;
-    background-color: yellow;
+
     font-weight: 700;
 }
 

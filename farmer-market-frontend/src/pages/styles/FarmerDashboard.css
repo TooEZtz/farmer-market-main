@@ -1,4 +1,5 @@
 .farmer-dashboard {
+    position: relative;
     max-width: 100%;
     margin: 80px auto;
     padding: 20px;
@@ -41,13 +42,29 @@ h1 {
 
 .mid {
     width: 100%;
-    border-top: 10px solid white;
-    background-color: #218838;
+    justify-content: center;
     display: flex;
     flex-direction: row;
     padding: 5% 0;
+    background-image: url(./Img/bg.gif);
+    background-size: cover;
+    background-position: 15px;
+
 }
 
+.mid form {
+    width: 50%;
+}
+
+.mid form input {
+    width: 100%;
+    padding: 10px 15px;
+}
+
+.mid form textarea {
+    width: 100%;
+    padding: 10px 15px;
+}
 
 h2 {
     font-size: 1.8rem;
@@ -55,16 +72,16 @@ h2 {
     margin: 20px 0 10px;
 }
 
-form {
+.mid form {
     display: flex;
     flex-direction: column;
     gap: 15px;
     margin-bottom: 20px;
 }
 
-input[type="text"],
-input[type="number"],
-textarea {
+.mid form input[type="text"],
+.mid form input[type="number"],
+.mid form textarea {
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -72,17 +89,17 @@ textarea {
     transition: border-color 0.3s;
 }
 
-input[type="text"]:focus,
-input[type="number"]:focus,
-textarea:focus {
+.mid form input[type="text"]:focus,
+.mid form input[type="number"]:focus,
+.mid form textarea:focus {
     border-color: #007bff;
     outline: none;
 }
 
-textarea {
+.mid form textarea {
     resize: vertical;
     height: 100px;
-    /* Set a fixed height for the textarea */
+
 }
 
 button {
@@ -107,6 +124,8 @@ button:hover {
 }
 
 .dashboard-product-card {
+    display: flex;
+    flex-direction: column;
     padding: 15px;
     border: 1px solid #e0e0e0;
     border-radius: 6px;
